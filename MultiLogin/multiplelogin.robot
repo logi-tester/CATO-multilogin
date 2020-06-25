@@ -4,13 +4,13 @@ Library           SeleniumLibrary
 Library           ExcelLibrary
 
 *** Variables ***    
-${Excel_File_Path}    H:\\Logi\\Robot_Pro\\LibraryDemo\\
+${Excel_file_name}    credential_details.xls
 ${SheetName}      Sheet1
 
 *** Test Cases ***
 Multiple login
     Jenkins browser launch
-    Open Excel Current Directory    testdata.xls
+    Open Excel    ${CURDIR}/${Excel_file_name}
     ${userName}=    Read Cell Data By Coordinates    ${SheetName}    0    1
     ${userPass}=    Read Cell Data By Coordinates    ${SheetName}    1    1
     Input Text    id=form_username    ${userName}
