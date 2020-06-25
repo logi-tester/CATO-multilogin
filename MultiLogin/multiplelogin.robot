@@ -50,6 +50,7 @@ Jenkins browser launch
     Call Method    ${chrome_options}    add_argument    disable-gpu
     Call Method    ${chrome_options}    add_argument    no-sandbox
     Create WebDriver    Chrome    chrome_options=${chrome_options}
+    SeleniumLibrary.Set Window Size    1920    1080
     Go To    http://webtest.xerago.com/cvm/
     Maximize Browser Window
     Set Browser Implicit Wait    15s
