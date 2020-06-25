@@ -41,3 +41,10 @@ Multiple login
     Multilogin_repeated
     Log To Console    Reviewer login successfully
 
+*** Keywords ***
+Multilogin_repeated
+    Click Button    id=form_login
+    Wait Until Element Is Visible    id=loginuser    25s
+    Log To Console    Creator login success
+    Mouse Over    id=loginuser
+    Click Element    xpath=.//ul[@class='dropdown-menu welcome-icon']/li/span
