@@ -21,22 +21,22 @@ To enter Valid username & Valid password
 
 To Enter valid username & Invalid password
     Jenkins browser launch
-    Input Text    xpath=(.//*[@type='text'])[1]    admins
-    Input Text    xpath=(.//*[@type='text'])[2]    adminshbbcdh
+    Input Text    xpath=.//*[@type='text']    admins
+    Input Text    xpath=.//*[@type='password']    adminshbbcdh
     Click Element    xpath=(.//*[@type='submit'])[1]
     Page Should Contain    Please enter your password
 
 To Enter Invalid username & valid password
     Jenkins browser launch
-    Input Text    xpath=(.//*[@type='text'])[1]    adminsvd
-    Input Text    xpath=(.//*[@type='text'])[2]    admins@123
+    Input Text    xpath=.//*[@type='text']    adminsvd
+    Input Text    xpath=.//*[@type='password']    admins@123
     Click Element    xpath=(.//*[@type='submit'])[1]
     Page Should Contain    Please enter your username
 
 To Enter Invalid username & Invalid password
     Jenkins browser launch
-    Input Text    xpath=(.//*[@type='text'])[1]    test
-    Input Text    xpath=(.//*[@type='text'])[2]    test
+    Input Text    xpath=.//*[@type='text']    test
+    Input Text    xpath=.//*[@type='password']    test
     Click Element    xpath=(.//*[@type='submit'])[1]
     Page Should Contain    Please enter your username and password to login
 
