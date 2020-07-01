@@ -11,7 +11,7 @@ ${baseurl}        http://webtest.xerago.com/cvm/
 *** Test Cases ***
 To enter valid username & valid password
     Jenkins browser launch
-    Open Excel    ${CURDIR}\\${excel_file_name}
+    Open Excel    ${CURDIR}/${excel_file_name}
     ${userName}=    Read Cell Data By Coordinates    Sheet1    0    3
     ${userPass}=    Read Cell Data By Coordinates    Sheet1    1    3
     Input Text    id=form_username    ${userName}
